@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Founder — Clay & Calm</title>
+  <meta name="description" content="Meet Ananya — the maker behind Clay & Calm. Our story and studio ethos." />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a0542d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { clay:{50:'#f7f2ee',100:'#f3ede7',200:'#e8d9cc',300:'#d7c1b3',400:'#c59c86',500:'#b1744f',600:'#a0542d',700:'#7e3f20',800:'#5c2f18',900:'#3d2011'}, sage:{50:'#f1f6f4',200:'#cfe2dd',400:'#8aa39b',600:'#5f7c74'}, ink:'#2c2a29' },
+      boxShadow: { soft:'0 10px 30px rgba(0,0,0,0.08)'},
+      fontFamily: { display:['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','sans-serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body class="font-display text-ink bg-clay-50">
+
+  <header class="sticky top-0 z-50 bg-white/80 glass border-b border-clay-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <span class="text-2xl">🫙</span>
+          <span class="font-semibold tracking-tight group-hover:text-clay-700">Clay & Calm</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 font-medium">
+          <a href="store.html" class="hover:text-clay-700">Store</a>
+          <a href="workshops.html" class="hover:text-clay-700">Workshops</a>
+          <a href="founder.html" class="hover:text-clay-700">Founder</a>
+          <a href="contact.html" class="hover:text-clay-700">Visit</a>
+          <a href="https://wa.me/917000000000?text=Namaste!%20Tell%20me%20about%20your%20workshops." class="inline-flex items-center rounded-full bg-clay-600 px-4 py-2 text-white shadow-soft hover:bg-clay-700">WhatsApp</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-full p-2 hover:bg-clay-100" aria-label="Open menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-clay-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-3 space-y-2">
+        <a href="store.html" class="block">Store</a>
+        <a href="workshops.html" class="block">Workshops</a>
+        <a href="founder.html" class="block">Founder</a>
+        <a href="contact.html" class="block">Visit</a>
+        <a href="https://wa.me/917000000000?text=Namaste!" class="inline-flex items-center rounded-full bg-clay-600 px-4 py-2 text-white">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-14">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold">Meet the Maker</h1>
+      <p class="mt-2 text-neutral-600">Clay taught me patience. This studio is how I share that calm with the city.</p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-[220px,1fr] items-start">
+        <img src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?q=80&w=800&auto=format&fit=crop" alt="Founder portrait" class="rounded-2xl object-cover w-full h-[260px] sm:h-full" />
+        <div class="space-y-4 text-neutral-700 leading-relaxed">
+          <p>I'm <strong>Ananya</strong>, trained in Jaipur by generous artisans who let me learn beside them. In 2022, I moved back to Bengaluru and opened this tiny studio.</p>
+          <p>I make functional pieces for everyday use — the mug you reach for each morning, the bowl that holds your favourite salad, the desk planter that makes Zoom kinder.</p>
+          <ul class="mt-4 grid sm:grid-cols-3 gap-3 text-sm">
+            <li class="rounded-xl bg-white p-3 ring-1 ring-clay-200">Small batches only</li>
+            <li class="rounded-xl bg-white p-3 ring-1 ring-clay-200">Locally fired</li>
+            <li class="rounded-xl bg-white p-3 ring-1 ring-clay-200">Food-safe glazes</li>
+          </ul>
+          <p class="font-[Caveat] text-2xl text-clay-700">Come say hi — chai’s on me.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-clay-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-neutral-500">© <span id="year"></span> Clay & Calm. All rights reserved.</p>
+        <form class="flex items-stretch gap-2 w-full sm:w-auto" onsubmit="event.preventDefault(); window.location='https://wa.me/917000000000?text=Please%20send%20me%20workshop%20dates%20on%20WhatsApp';">
+          <input aria-label="Your phone on WhatsApp" placeholder="Your WhatsApp number" class="rounded-xl border border-clay-300 px-3 py-2 w-full sm:w-64"/>
+          <button class="rounded-xl bg-clay-600 px-4 py-2 text-white">Send dates</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>

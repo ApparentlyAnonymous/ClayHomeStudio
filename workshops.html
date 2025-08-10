@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Workshops — Clay & Calm</title>
+  <meta name="description" content="Beginner-friendly pottery workshops in Bengaluru. Book seats online." />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a0542d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { clay:{50:'#f7f2ee',100:'#f3ede7',200:'#e8d9cc',300:'#d7c1b3',400:'#c59c86',500:'#b1744f',600:'#a0542d',700:'#7e3f20',800:'#5c2f18',900:'#3d2011'}, sage:{50:'#f1f6f4',200:'#cfe2dd',400:'#8aa39b',600:'#5f7c74'}, ink:'#2c2a29' },
+      boxShadow: { soft:'0 10px 30px rgba(0,0,0,0.08)'},
+      fontFamily: { display:['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','sans-serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body class="font-display text-ink bg-clay-50">
+
+  <header class="sticky top-0 z-50 bg-white/80 glass border-b border-clay-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <span class="text-2xl">🫙</span>
+          <span class="font-semibold tracking-tight group-hover:text-clay-700">Clay & Calm</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 font-medium">
+          <a href="store.html" class="hover:text-clay-700">Store</a>
+          <a href="workshops.html" class="hover:text-clay-700">Workshops</a>
+          <a href="founder.html" class="hover:text-clay-700">Founder</a>
+          <a href="contact.html" class="hover:text-clay-700">Visit</a>
+          <a href="https://wa.me/917000000000?text=Namaste!%20Tell%20me%20about%20your%20workshops." class="inline-flex items-center rounded-full bg-clay-600 px-4 py-2 text-white shadow-soft hover:bg-clay-700">WhatsApp</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-full p-2 hover:bg-clay-100" aria-label="Open menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-clay-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-3 space-y-2">
+        <a href="store.html" class="block">Store</a>
+        <a href="workshops.html" class="block">Workshops</a>
+        <a href="founder.html" class="block">Founder</a>
+        <a href="contact.html" class="block">Visit</a>
+        <a href="https://wa.me/917000000000?text=Namaste!" class="inline-flex items-center rounded-full bg-clay-600 px-4 py-2 text-white">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold">Weekend Workshops</h1>
+      <p class="mt-2 text-neutral-600">Beginner-friendly. All materials included. Limited seats — bring a friend :)</p>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl bg-clay-50 p-5 shadow-soft ring-1 ring-clay-200">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">Intro to Wheel Throwing</h3>
+            <span class="rounded-full bg-white px-3 py-1 text-xs text-clay-700 ring-1 ring-clay-200">2 hrs</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-700">Perfect for first-timers. You’ll throw a small cup/mug and we’ll glaze it for you.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-semibold">₹ 1,500</span>
+            <a href="https://rzp.io/l/your-payment-page" class="rounded-full bg-clay-600 px-4 py-2 text-sm text-white hover:bg-clay-700">Book seat</a>
+          </div>
+          <p class="mt-2 text-xs text-neutral-500">Next batch: Sat 5 PM • 8 seats</p>
+        </article>
+
+        <article class="rounded-2xl bg-clay-50 p-5 shadow-soft ring-1 ring-clay-200">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">Hand-building Basics</h3>
+            <span class="rounded-full bg-white px-3 py-1 text-xs text-clay-700 ring-1 ring-clay-200">3 hrs</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-700">Coil, pinch & slab techniques. Leave with a bowl/planter you’ll love.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-semibold">₹ 1,800</span>
+            <a href="https://forms.gle/your-google-form" class="rounded-full border border-clay-300 px-4 py-2 text-sm text-clay-700 hover:bg-white">Join waitlist</a>
+          </div>
+          <p class="mt-2 text-xs text-neutral-500">New dates every Sunday</p>
+        </article>
+
+        <article class="rounded-2xl bg-clay-50 p-5 shadow-soft ring-1 ring-clay-200">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">Glazing & Firing</h3>
+            <span class="rounded-full bg-white px-3 py-1 text-xs text-clay-700 ring-1 ring-clay-200">2 hrs</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-700">Play with color and learn kiln safety.</p>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="font-semibold">₹ 1,300</span>
+            <a href="https://wa.me/917000000000?text=I'd%20like%20to%20book%20Glazing%20%26%20Firing" class="rounded-full bg-clay-600 px-4 py-2 text-sm text-white hover:bg-clay-700">WhatsApp to book</a>
+          </div>
+          <p class="mt-2 text-xs text-neutral-500">Weekday evenings</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-clay-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-neutral-500">© <span id="year"></span> Clay & Calm. All rights reserved.</p>
+        <form class="flex items-stretch gap-2 w-full sm:w-auto" onsubmit="event.preventDefault(); window.location='https://wa.me/917000000000?text=Please%20send%20me%20workshop%20dates%20on%20WhatsApp';">
+          <input aria-label="Your phone on WhatsApp" placeholder="Your WhatsApp number" class="rounded-xl border border-clay-300 px-3 py-2 w-full sm:w-64"/>
+          <button class="rounded-xl bg-clay-600 px-4 py-2 text-white">Send dates</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
