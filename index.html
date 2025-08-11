@@ -1,75 +1,111 @@
-<main>
-  <!-- Hero with scroll-interactive pottery wheel -->
-  <section id="hero" class="relative">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <p class="text-sm inline-flex items-center gap-2 rounded-full bg-white/60 backdrop-blur px-3 py-1 text-ink ring-1 ring-terra-200">
-          Namaste 👋 • Small batches • Bengaluru
-        </p>
-        <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight">Clay Home Studio</h1>
-        <p class="mt-3 text-lg text-neutral-700">We make quiet, useful things out of clay — and help beginners fall in love with the wheel.</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="store.html" class="inline-flex items-center rounded-xl bg-terra-600 px-5 py-3 text-white shadow-soft hover:bg-terra-700">Shop small-batch</a>
-          <a href="workshops.html" class="inline-flex items-center rounded-xl border border-terra-300/70 bg-white/60 backdrop-blur px-5 py-3 text-ink hover:bg-white/80">Book a workshop</a>
-        </div>
-        <div class="mt-5 text-sm text-neutral-600 flex items-center gap-4">
-          <span>UPI / Razorpay</span><span>•</span><span>WhatsApp support</span><span>•</span><span>Made in Bengaluru</span>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clay Home Studio</title>
+  <meta name="description" content="Handmade ceramics, warm workshops, and a small studio in Bengaluru." />
 
-      <!-- Sticky / interactive wheel -->
-      <div class="relative h-[420px]">
-        <div class="sticky top-24">
-          <div class="wheel-wrap glass-card">
-            <svg id="wheelSvg" viewBox="0 0 300 300" class="w-full h-auto" aria-label="Pottery wheel animation">
-              <circle cx="150" cy="150" r="140" fill="url(#bgGrad)" opacity="0.35"></circle>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a0542d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { clay:{50:'#f7f2ee',100:'#f3ede7',200:'#e8d9cc',300:'#d7c1b3',400:'#c59c86',500:'#b1744f',600:'#a0542d',700:'#7e3f20',800:'#5c2f18',900:'#3d2011'}, sage:{50:'#f1f6f4',200:'#cfe2dd',400:'#8aa39b',600:'#5f7c74'}, ink:'#2c2a29' },
+      boxShadow: { soft:'0 10px 30px rgba(0,0,0,0.08)'},
+      fontFamily: { display:['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','sans-serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="styles.css" />
 
-              <!-- progress ring -->
-              <circle cx="150" cy="150" r="120" fill="none" stroke="rgba(166,75,42,0.25)" stroke-width="14"></circle>
-              <circle id="progressRingActive" cx="150" cy="150" r="120" fill="none"
-                      stroke="rgba(166,75,42,0.85)" stroke-linecap="round"
-                      stroke-width="14" stroke-dasharray="754" stroke-dashoffset="754"></circle>
+  <style>.polaroid{box-shadow:0 18px 40px rgba(0,0,0,.12)}</style>
+</head>
+<body class="font-display text-ink bg-clay-50">
 
-              <!-- spinning wheel disc -->
-              <g id="wheelGroup" transform="rotate(0,150,150)">
-                <circle cx="150" cy="150" r="100" fill="rgba(255,255,255,0.85)" stroke="#D9B79A" stroke-width="3"></circle>
-                <g stroke="#C88E65" stroke-width="2" opacity="0.9">
-                  <line x1="150" y1="50"  x2="150" y2="250"/>
-                  <line x1="50"  y1="150" x2="250" y2="150"/>
-                  <line x1="80"  y1="80"  x2="220" y2="220"/>
-                  <line x1="220" y1="80"  x2="80"  y2="220"/>
-                </g>
-                <circle cx="150" cy="150" r="12" fill="#A64B2A"></circle>
-              </g>
-
-              <!-- pot that subtly “forms” as you scroll -->
-              <g id="potGroup">
-                <path id="potShape"
-                      d="M150 95 C 160 110, 170 120, 170 140 C 170 180, 130 190, 130 210 C 130 220, 170 220, 170 210 C 170 190, 130 180, 130 140 C 130 120, 140 110, 150 95 Z"
-                      fill="rgba(166,75,42,0.25)" stroke="rgba(166,75,42,0.55)" stroke-width="2"/>
-              </g>
-
-              <defs>
-                <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#FFFFFF"/>
-                  <stop offset="100%" stop-color="#F7EFEA"/>
-                </radialGradient>
-              </defs>
-            </svg>
-            <p class="mt-3 text-center text-sm text-neutral-600">Scroll to spin the wheel</p>
-          </div>
-        </div>
+  <header class="sticky top-0 z-50 bg-white/80 glass border-b border-clay-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <span class="text-2xl">🫙</span>
+          <span class="font-semibold tracking-tight group-hover:text-clay-700">Clay & Calm</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 font-medium">
+          <a href="store.html" class="hover:text-clay-700">Store</a>
+          <a href="workshops.html" class="hover:text-clay-700">Workshops</a>
+          <a href="founder.html" class="hover:text-clay-700">Founder</a>
+          <a href="contact.html" class="hover:text-clay-700">Visit</a>
+          <a href="https://wa.me/917000000000?text=Namaste!%20Tell%20me%20about%20your%20workshops." class="inline-flex items-center rounded-full bg-clay-600 px-4 py-2 text-white shadow-soft hover:bg-clay-700">WhatsApp</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-full p-2 hover:bg-clay-100" aria-label="Open menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </div>
     </div>
-  </section>
-
-  <!-- Optional highlights under the hero -->
-  <section class="py-12">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-6 sm:grid-cols-3">
-      <div class="glass-card"><h3 class="font-semibold">Small batches</h3><p class="text-sm text-neutral-700 mt-1">Every piece is hand-thrown & fired locally.</p></div>
-      <div class="glass-card"><h3 class="font-semibold">Weekend workshops</h3><p class="text-sm text-neutral-700 mt-1">Beginner-friendly. All materials included.</p></div>
-      <div class="glass-card"><h3 class="font-semibold">Friendly support</h3><p class="text-sm text-neutral-700 mt-1">WhatsApp us any time.</p></div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-clay-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-3 space-y-2">
+        <a href="store.html" class="block">Store</a>
+        <a href="workshops.html" class="block">Workshops</a>
+        <a href="founder.html" class="block">Founder</a>
+        <a href="contact.html" class="block">Visit</a>
+        <a href="https://wa.me/917000000000?text=Namaste!" class="inline-flex items-center rounded-full bg-clay-600 px-4 py-2 text-white">WhatsApp</a>
+      </div>
     </div>
-  </section>
-</main>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-[1.2fr,1fr] gap-10 items-center">
+        <div>
+          <p class="text-sm inline-flex items-center gap-2 rounded-full bg-sage-50 px-3 py-1 text-sage-600 ring-1 ring-sage-200">Namaste 👋 — Bengaluru studio • Small batches</p>
+          <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight">Hi, I’m Anusha. I make quiet, useful things out of clay.</h1>
+          <p class="mt-4 text-lg text-neutral-600">Every mug, bowl, and planter is made by hand in our little lane-side studio. Drop in for chai, or join a beginner workshop this weekend.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="store.html" class="inline-flex items-center rounded-xl bg-clay-600 px-5 py-3 text-white shadow-soft hover:bg-clay-700">Shop small-batch</a>
+            <a href="workshops.html" class="inline-flex items-center rounded-xl border border-clay-200 px-5 py-3 text-clay-700 hover:bg-clay-100">Book a workshop</a>
+        </div>
+        <div class="relative">
+          <figure class="bg-white p-3 rounded-[22px] polaroid inline-block">
+            <img src="https://images.unsplash.com/photo-1544739313-8f94eceb492f?q=80&w=1600&auto=format&fit=crop" alt="Ananya at the wheel" class="rounded-[16px] w-full object-cover" />
+            <figcaption class="font-[Caveat] text-xl text-center mt-2 text-neutral-700">first throw of the morning</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-6 sm:grid-cols-3">
+        <a href="store.html" class="rounded-xl p-5 ring-1 ring-clay-200 hover:bg-clay-50">
+          <h3 class="font-semibold">Shop</h3>
+          <p class="text-sm text-neutral-600 mt-1">Small batches this month</p>
+        </a>
+        <a href="workshops.html" class="rounded-xl p-5 ring-1 ring-clay-200 hover:bg-clay-50">
+          <h3 class="font-semibold">Workshops</h3>
+          <p class="text-sm text-neutral-600 mt-1">Beginner friendly • weekends</p>
+        </a>
+        <a href="founder.html" class="rounded-xl p-5 ring-1 ring-clay-200 hover:bg-clay-50">
+          <h3 class="font-semibold">Founder</h3>
+          <p class="text-sm text-neutral-600 mt-1">Our story & studio ethos</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-clay-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-neutral-500">© <span id="year"></span> Clay & Calm. All rights reserved.</p>
+        <form class="flex items-stretch gap-2 w-full sm:w-auto" onsubmit="event.preventDefault(); window.location='https://wa.me/917000000000?text=Please%20send%20me%20workshop%20dates%20on%20WhatsApp';">
+          <input aria-label="Your phone on WhatsApp" placeholder="Your WhatsApp number" class="rounded-xl border border-clay-300 px-3 py-2 w-full sm:w-64"/>
+          <button class="rounded-xl bg-clay-600 px-4 py-2 text-white">Send dates</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
+
 
