@@ -1,24 +1,7 @@
-
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
 .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.65); }
 
-:root { --terra: #A64B2A; }
-html { scroll-behavior: smooth; }
-.glass-card {
-  border-radius: 16px;
-  background: rgba(255,255,255,0.68);
-  backdrop-filter: blur(10px);
-  padding: 16px;
-  border: 1px solid rgba(166,75,42,0.25);
-}
-.wheel-wrap {
-  border-radius: 24px;
-  background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(166,75,42,0.25);
-  padding: 16px;
-  box-shadow: 0 18px 40px rgba(0,0,0,.10);
-}
-@media (prefers-reduced-motion: reduce) {
-  #wheelSvg { animation: none !important; }
-}
+/* --- Hero background video --- */
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+@media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
