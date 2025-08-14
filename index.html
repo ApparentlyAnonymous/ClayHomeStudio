@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Clay Home Studio</title>
+  <title>Clay Home Studio — Pottery Studio</title>
   <meta name="description" content="Handmade ceramics, warm workshops, and a small studio in Bengaluru." />
 
   <meta charset="utf-8" />
@@ -29,7 +29,7 @@
       <div class="flex h-16 items-center justify-between">
         <a href="index.html" class="flex items-center gap-3 group">
           <span class="text-2xl">🫙</span>
-          <span class="font-semibold tracking-tight group-hover:text-clay-700">Clay & Calm</span>
+          <span class="font-semibold tracking-tight group-hover:text-clay-700">Clay Home Studio</span>
         </a>
         <nav class="hidden md:flex items-center gap-6 font-medium">
           <a href="store.html" class="hover:text-clay-700">Store</a>
@@ -55,24 +55,55 @@
   </header>
 
   <main>
-    <section class="relative overflow-hidden">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-[1.2fr,1fr] gap-10 items-center">
-        <div>
-          <p class="text-sm inline-flex items-center gap-2 rounded-full bg-sage-50 px-3 py-1 text-sage-600 ring-1 ring-sage-200">Namaste 👋 — Bengaluru studio • Small batches</p>
-          <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight">Hi, I’m Anusha. I make quiet, useful things out of clay.</h1>
-          <p class="mt-4 text-lg text-neutral-600">Every mug, bowl, and planter is made by hand in our little lane-side studio. Drop in for chai, or join a beginner workshop this weekend.</p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="store.html" class="inline-flex items-center rounded-xl bg-clay-600 px-5 py-3 text-white shadow-soft hover:bg-clay-700">Shop small-batch</a>
-            <a href="workshops.html" class="inline-flex items-center rounded-xl border border-clay-200 px-5 py-3 text-clay-700 hover:bg-clay-100">Book a workshop</a>
-        </div>
-        <div class="relative">
-          <figure class="bg-white p-3 rounded-[22px] polaroid inline-block">
-            <img src="https://images.unsplash.com/photo-1544739313-8f94eceb492f?q=80&w=1600&auto=format&fit=crop" alt="Ananya at the wheel" class="rounded-[16px] w-full object-cover" />
-            <figcaption class="font-[Caveat] text-xl text-center mt-2 text-neutral-700">first throw of the morning</figcaption>
-          </figure>
-        </div>
+    <!-- HERO -->
+<section class="relative min-h-[80vh] overflow-hidden">
+  <!-- Background video -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/hero.webm" type="video/webm"/>
+    <source src="assets/hero.mp4" type="video/mp4"/>
+  </video>
+  <!-- Overlay for readability -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32 grid lg:grid-cols-[1.2fr,1fr] gap-10 items-center text-white">
+    <div>
+      <p class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/30 px-3 py-1 text-sm">
+        <span>Namaste 👋 — Bengaluru studio • Small batches</span>
+      </p>
+
+      <h1 class="mt-4 text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight [text-wrap:balance] max-w-2xl">
+        Hi, I’m Anusha. I make quiet, useful things out of clay.
+      </h1>
+
+      <p class="mt-5 text-lg sm:text-xl text-white/90 max-w-xl">
+        Every mug, bowl, and plate is made slowly and simply. Drop in for chai, or join a beginner workshop this weekend.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="store.html" class="inline-flex items-center rounded-xl bg-white/95 text-clay-700 px-6 py-3 text-base font-semibold shadow-soft hover:bg-white">
+          Shop small-batch
+        </a>
+        <a href="workshops.html" class="inline-flex items-center rounded-xl border border-white/60 bg-white/10 px-6 py-3 text-base font-semibold text-white hover:bg-white/15 backdrop-blur">
+          Book a workshop
+        </a>
       </div>
-    </section>
+
+      <div class="mt-6 flex flex-wrap items-center gap-6 text-sm text-white/80">
+        <span>UPI / Razorpay</span><span class="hidden sm:inline">•</span><span>WhatsApp support</span><span class="hidden sm:inline">•</span><span>Made in Bengaluru</span>
+      </div>
+    </div>
+
+    <!-- Optional side visual (hidden on small screens) -->
+    <div class="relative hidden lg:block">
+      <figure class="bg-white p-3 rounded-[22px] polaroid inline-block">
+        <img src="https://images.unsplash.com/photo-1544739302-98f9d927d9b7?q=80&w=1200&auto=format" alt="Anusha at the wheel" class="rounded-[16px] w-full object-cover" />
+        <figcaption class="font-[Caveat] text-xl text-center mt-2 text-neutral-700">first throw of the morning</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 
     <section class="py-10 bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-6 sm:grid-cols-3">
@@ -95,7 +126,7 @@
   <footer class="border-t border-clay-200 bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-neutral-500">© <span id="year"></span> Clay & Calm. All rights reserved.</p>
+        <p class="text-sm text-neutral-500">© <span id="year"></span> Clay Home Studio. All rights reserved.</p>
         <form class="flex items-stretch gap-2 w-full sm:w-auto" onsubmit="event.preventDefault(); window.location='https://wa.me/917000000000?text=Please%20send%20me%20workshop%20dates%20on%20WhatsApp';">
           <input aria-label="Your phone on WhatsApp" placeholder="Your WhatsApp number" class="rounded-xl border border-clay-300 px-3 py-2 w-full sm:w-64"/>
           <button class="rounded-xl bg-clay-600 px-4 py-2 text-white">Send dates</button>
@@ -107,5 +138,3 @@
 
 </body>
 </html>
-
-
